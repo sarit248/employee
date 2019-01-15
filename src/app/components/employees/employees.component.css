@@ -1,0 +1,22 @@
+
+
+table{
+    text-align: center;
+    margin: 60px auto;
+    
+  
+}
+
+tr:first-child {
+    background-color: gray;
+} 
+
+tr:nth-child(even) {
+    background-color: cyan;
+}
+
+tr:nth-child(odd) {
+    background-color:pink;
+}
+
+

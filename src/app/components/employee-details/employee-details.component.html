@@ -1,0 +1,9 @@
+<div *ngIf="employee">
+
+        <h3> {{employee.firstName}}, {{employee.lastName}}</h3>
+    
+        <app-thumbnail 
+        source="/assets/images/EmployeesImages/{{employee.firstName +'_' + employee.lastName}}.jpg"
+        side="200">
+        </app-thumbnail>  
+    </div>

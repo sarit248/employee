@@ -1,0 +1,29 @@
+<table border="1" align="center">
+
+    <tr>
+        <th>Full Name</th>
+        <th>Title</th>
+        <th>Location</th>
+        <th>Birth Date</th>
+        <th>Image</th>
+    </tr>
+    <tr *ngFor="let a of allEmployees">
+        <td> {{a.firstName}}, {{a.lastName}}</td>
+        <td> {{a.title}}</td>
+        <td> {{a.city}}, {{a.country}}</td>
+        <td>
+            <app-date birthDate="{{a.birthDate}}"></app-date>
+        </td>
+        <!-- <td>{{a.birthDate}}</td> -->
+        <td>
+            <app-thumbnail source="/assets/images/EmployeesImages/{{a.firstName +'_' + a.lastName}}.jpg" 
+            side="50" 
+            id="{{a.employeeID}}"
+            (emitter)="test($event)">
+            </app-thumbnail>
+        </td>
+    </tr>
+</table>
+
+<app-employee-details *ngIf="myEmpId" 
+empId="{{myEmpId}}"></app-employee-details>
